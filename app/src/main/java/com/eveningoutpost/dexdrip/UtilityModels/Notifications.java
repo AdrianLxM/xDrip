@@ -211,7 +211,7 @@ public class Notifications {
             Intent intent = new Intent(mContext, Home.class);
             bgNotificationCreate(title, content, intent, BgNotificationId);
 
-        } else if ((userNotification != null) && (userNotification.timestamp >= ((new Date().getTime()) - (60000 * bg_snooze))))  {
+        } else if ((userNotification != null) && (userNotification.timestamp <= ((new Date().getTime()) - (60000 * bg_snooze))))  {
             String title = value + " " + slopeArrow;
             String content = "BG LEVEL ALERT: " + value + " " + slopeArrow;
             Intent intent = new Intent(mContext, Home.class);
